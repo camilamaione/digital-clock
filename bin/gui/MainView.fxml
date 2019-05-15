@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" style="-fx-background-color: #e6e6f2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
+   <children>
+      <Label fx:id="labelWrittenDate" text="Segunda-feira, 13 de Junho de 2019">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="40.0">
+         <children>
+            <Label fx:id="labelSEG" text="SEG" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTER" text="TER" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelQUA" text="QUA" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelQUI" text="QUI" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSEX" text="SEX" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSAB" text="SAB" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelDOM" text="DOM" textFill="#c1b8c9">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelTime" text="01:00:20">
+                     <font>
+                        <Font name="Impact" size="48.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="labelTimeAMorPM" text="AM">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="318.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/alarm.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Label fx:id="labelAlarmTime" text="06:00:00" textFill="#cccccc">
+               <font>
+                  <Font name="Impact" size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="labelAlarmTimeAMorPM" text="AM" textFill="#6c5875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <Line endX="100.0" fill="#2f0b7c" opacity="0.15" startX="-220.0" stroke="#5f1f7a" />
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <CheckBox fx:id="checkBoxAMorPM" mnemonicParsing="false" onAction="#onCheckBoxAMorPMAction" prefHeight="17.0" prefWidth="152.0" text="AM/PM">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></CheckBox>
+            <CheckBox fx:id="checkBoxAlarmActivated" mnemonicParsing="false" onAction="#onCheckBoxAlarmActivatedAction" text="Alarm activated">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </CheckBox>
+            <Button fx:id="btSetAlarm" mnemonicParsing="false" onAction="#onBtSetAlarmAction" text="Setup">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
